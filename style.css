@@ -12,7 +12,7 @@ body {
   color: #333;
   padding: 0 20px;
   scroll-behavior: smooth;
-  opacity: 0; /* hidden until page load */
+  opacity: 0;
 }
 
 /* Scroll progress bar */
@@ -61,7 +61,6 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Header shadow animation */
 header.scrolled {
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
   transition: box-shadow 0.3s ease;
@@ -86,7 +85,7 @@ section {
   }
 }
 
-/* About bio side-by-side */
+/* About bio */
 .bio-container {
   display: flex;
   flex-wrap: wrap;
