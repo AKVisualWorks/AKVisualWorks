@@ -1,65 +1,19 @@
-const videos = [
-  { id: "j4_-xOXHhSk", title: "Video 1", thumbnail: "https://img.youtube.com/vi/j4_-xOXHhSk/hqdefault.jpg" },
-  { id: "6H1cMmWg4gM", title: "Video 2", thumbnail: "https://img.youtube.com/vi/6H1cMmWg4gM/hqdefault.jpg" },
-  { id: "cwPZJVsMyc4", title: "Video 3", thumbnail: "https://img.youtube.com/vi/cwPZJVsMyc4/hqdefault.jpg" },
-  { id: "Q74PUc7Q37E", title: "Video 4", thumbnail: "https://img.youtube.com/vi/Q74PUc7Q37E/hqdefault.jpg" },
-  { id: "JU-fP_vyJSI", title: "Video 5", thumbnail: "https://img.youtube.com/vi/JU-fP_vyJSI/hqdefault.jpg" }
-];
+document.addEventListener("DOMContentLoaded", function() {
+  const videos = [
+    "https://www.youtube.com/embed/j4_-xOXHhSk",
+    "https://www.youtube.com/embed/6H1cMmWg4gM",
+    "https://www.youtube.com/embed/cwPZJVsMyc4",
+    "https://www.youtube.com/embed/Q74PUc7Q37E",
+    "https://www.youtube.com/embed/JU-fP_vyJSI"
+  ];
 
-const gallery = document.getElementById("video-gallery");
-const lightbox = document.getElementById("lightbox");
-const lightboxIframe = lightbox.querySelector("iframe");
-const lightboxClose = lightbox.querySelector(".close");
+  const gallery = document.getElementById("video-gallery");
 
-videos.forEach(video => {
-  const card = document.createElement("div");
-  card.classList.add("video-card");
-  card.innerHTML = `<img src="${video.thumbnail}" alt="${video.title}"><p>${video.title}</p>`;
-  card.addEventListener("click", () => {
-    lightboxIframe.src = `https://www.youtube.com/embed/${video.id}?autoplay=1`;
-    lightbox.style.display = "flex";
+  videos.forEach(url => {
+    const iframe = document.createElement("iframe");
+    iframe.src = url;
+    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+    iframe.allowFullscreen = true;
+    gallery.appendChild(iframe);
   });
-  gallery.appendChild(card);
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('fade-in-card');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  observer.observe(card);
-});
-
-lightboxClose.addEventListener("click", () => {
-  lightbox.style.display = "none";
-  lightboxIframe.src = "";
-});
-
-lightbox.addEventListener("click", e => {
-  if(e.target === lightbox){
-    lightbox.style.display = "none";
-    lightboxIframe.src = "";
-  }
-});
-
-window.addEventListener('load', () => {
-  document.body.classList.add('loaded');
-});
-
-const progressBar = document.getElementById('progress-bar');
-window.addEventListener('scroll', () => {
-  const scrollTop = window.scrollY;
-  const docHeight = document.body.scrollHeight - window.innerHeight;
-  const scrollPercent = (scrollTop / docHeight) * 100;
-  progressBar.style.width = scrollPercent + '%';
-
-  const header = document.querySelector('header');
-  if(scrollTop > 20){
-    header.classList.add('scrolled');
-  } else {
-    header.classList.remove('scrolled');
-  }
 });
