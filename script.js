@@ -1,19 +1,29 @@
-// List your videos: YouTube ID + Title + Thumbnail
+// List of your videos: YouTube ID + Title + Thumbnail
 const videos = [
   {
-    id: "YOUR_VIDEO_ID1",
-    title: "Project 1",
-    thumbnail: "https://img.youtube.com/vi/YOUR_VIDEO_ID1/hqdefault.jpg"
+    id: "j4_-xOXHhSk",
+    title: "Video 1",
+    thumbnail: "https://img.youtube.com/vi/j4_-xOXHhSk/hqdefault.jpg"
   },
   {
-    id: "YOUR_VIDEO_ID2",
-    title: "Project 2",
-    thumbnail: "https://img.youtube.com/vi/YOUR_VIDEO_ID2/hqdefault.jpg"
+    id: "6H1cMmWg4gM",
+    title: "Video 2",
+    thumbnail: "https://img.youtube.com/vi/6H1cMmWg4gM/hqdefault.jpg"
   },
   {
-    id: "YOUR_VIDEO_ID3",
-    title: "Project 3",
-    thumbnail: "https://img.youtube.com/vi/YOUR_VIDEO_ID3/hqdefault.jpg"
+    id: "cwPZJVsMyc4",
+    title: "Video 3",
+    thumbnail: "https://img.youtube.com/vi/cwPZJVsMyc4/hqdefault.jpg"
+  },
+  {
+    id: "Q74PUc7Q37E",
+    title: "Video 4",
+    thumbnail: "https://img.youtube.com/vi/Q74PUc7Q37E/hqdefault.jpg"
+  },
+  {
+    id: "JU-fP_vyJSI",
+    title: "Video 5",
+    thumbnail: "https://img.youtube.com/vi/JU-fP_vyJSI/hqdefault.jpg"
   }
 ];
 
