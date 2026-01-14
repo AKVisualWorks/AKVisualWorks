@@ -11,13 +11,33 @@ body {
   background-color: #f4f4f4;
   color: #333;
   padding: 0 20px;
+  scroll-behavior: smooth;
+  opacity: 0; /* hidden until page load */
+}
+
+/* Scroll progress bar */
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background: #ffcc00;
+  width: 0%;
+  z-index: 2000;
+  transition: width 0.25s ease;
+}
+
+/* Page load fade-in */
+body.loaded {
+  opacity: 1;
+  transition: opacity 0.8s ease;
 }
 
 /* Header */
 header {
   text-align: center;
   padding: 50px 0;
-  background-color: #222;
+  background: linear-gradient(135deg, #222, #444);
   color: #fff;
 }
 
@@ -41,9 +61,29 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* Header shadow animation */
+header.scrolled {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: box-shadow 0.3s ease;
+}
+
 /* Sections */
 section {
   padding: 50px 0;
+}
+
+/* Fade-in scroll animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* About bio side-by-side */
@@ -69,41 +109,98 @@ section {
 /* Video gallery */
 .video-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   margin-top: 20px;
 }
 
 .video-card {
-  background: #fff;
-  padding: 15px;
+  cursor: pointer;
   border-radius: 12px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
 }
 
-.video-card:hover {
-  transform: translateY(-5px);
-}
-
-.video-card iframe {
+.video-card img {
   width: 100%;
-  height: 200px;
-  border-radius: 8px;
+  display: block;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.video-card:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
 .video-card p {
-  margin-top: 10px;
   text-align: center;
+  background: #fff;
+  padding: 5px 0;
 }
 
-/* Links */
-a {
+/* Fade-in cards on scroll */
+.fade-in-card {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox iframe {
+  width: 80%;
+  height: 60%;
+  border-radius: 12px;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Social links */
+.social-links li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.social-links li a {
+  display: inline-block;
   color: #007acc;
+  text-decoration: none;
+  transition: transform 0.3s, color 0.3s;
 }
 
-a:hover {
-  color: #005a99;
+.social-links li a i {
+  margin-right: 8px;
+  transition: transform 0.3s;
+}
+
+.social-links li a:hover {
+  color: #ffcc00;
+}
+
+.social-links li a:hover i {
+  transform: scale(1.2);
 }
 
 /* Footer */
@@ -115,13 +212,14 @@ footer {
   margin-top: 40px;
 }
 
-/* Responsive tweaks */
+/* Responsive */
 @media (max-width: 600px) {
   .bio-container {
     flex-direction: column;
   }
 
-  .video-card iframe {
-    height: 180px;
+  .lightbox iframe {
+    width: 90%;
+    height: 50%;
   }
 }
