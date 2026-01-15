@@ -1,12 +1,29 @@
-// Scroll animations using Intersection Observer
-const sections = document.querySelectorAll('.section');
+// Language toggle
+const jpBtn = document.getElementById("jpBtn");
+const enBtn = document.getElementById("enBtn");
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
+jpBtn.onclick = () => switchLang("jp");
+enBtn.onclick = () => switchLang("en");
+
+function switchLang(lang) {
+  document.querySelectorAll(".jp").forEach(e => e.classList.toggle("hidden", lang !== "jp"));
+  document.querySelectorAll(".en").forEach(e => e.classList.toggle("hidden", lang !== "en"));
+
+  jpBtn.classList.toggle("active", lang === "jp");
+  enBtn.classList.toggle("active", lang === "en");
+}
+
+// Scroll reveal
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll() {
+  reveals.forEach(section => {
+    const top = section.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      section.classList.add("active");
     }
   });
-}, { threshold: 0.2 });
+}
 
-sections.forEach(section => observer.observe(section));
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
