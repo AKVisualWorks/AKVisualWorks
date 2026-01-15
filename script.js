@@ -1,32 +1,16 @@
-// Language toggle
-let currentLang = "jp";
+const jpBtn = document.getElementById("jpBtn");
+const enBtn = document.getElementById("enBtn");
 
-const toggle = document.getElementById("langToggle");
-const elements = document.querySelectorAll("[data-jp]");
-
-function updateLang() {
-  elements.forEach(el => {
-    el.textContent = el.dataset[currentLang];
+function switchLang(lang) {
+  document.querySelectorAll("[data-jp]").forEach(el => {
+    el.textContent = lang === "jp" ? el.dataset.jp : el.dataset.en;
   });
+
+  jpBtn.classList.toggle("active", lang === "jp");
+  enBtn.classList.toggle("active", lang === "en");
 }
 
-toggle.addEventListener("click", () => {
-  currentLang = currentLang === "jp" ? "en" : "jp";
-  toggle.textContent = currentLang === "jp" ? "EN" : "JP";
-  updateLang();
-});
+jpBtn.onclick = () => switchLang("jp");
+enBtn.onclick = () => switchLang("en");
 
-updateLang();
-
-// Scroll reveal
-const reveals = document.querySelectorAll(".reveal");
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-    }
-  });
-});
-
-reveals.forEach(r => observer.observe(r));
+switchLang("jp");
