@@ -2,78 +2,106 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <title>AKVisualWorks</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AK Visual Works</title>
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<!-- CHANGE CLASS HERE:
-theme-cinematic | theme-minimal | theme-bold -->
-<body class="theme-cinematic">
-
-<header class="hero">
-  <h1>AKVisualWorks</h1>
-  <p class="subtitle">映像制作 / 編集 / SNS</p>
-
-  <div class="language-toggle">
+<body>
+  <!-- Language Toggle -->
+  <div class="lang-toggle">
     <button id="jpBtn" class="active">JP</button>
     <button id="enBtn">EN</button>
   </div>
-</header>
 
-<section class="section framed">
-  <h2 data-jp="メイン映像" data-en="Featured Video"></h2>
-  <div class="video-wrapper">
-    <iframe 
-      src="https://www.youtube.com/embed/0XudW6piCtk"
-      frameborder="0"
-      allowfullscreen>
-    </iframe>
-  </div>
-</section>
-
-<section class="section framed">
-  <h2 data-jp="プロフェッショナル作品（早稲田大学）"
-      data-en="Professional Works (Waseda University)"></h2>
-  <div class="carousel">
-    <!-- Pro works -->
-    <!-- Repeat structure as needed -->
-    <a href="https://www.instagram.com/p/DS7p10fCceS/" target="_blank"><img src="https://www.instagram.com/p/DS7p10fCceS/media/?size=l"></a>
-    <a href="https://www.instagram.com/p/DSouPg1gJNq/" target="_blank"><img src="https://www.instagram.com/p/DSouPg1gJNq/media/?size=l"></a>
-    <a href="https://www.instagram.com/p/DRyshOSCc-B/" target="_blank"><img src="https://www.instagram.com/p/DRyshOSCc-B/media/?size=l"></a>
-    <a href="https://www.instagram.com/p/DRtY_NXjH2a/" target="_blank"><img src="https://www.instagram.com/p/DRtY_NXjH2a/media/?size=l"></a>
-  </div>
-</section>
-
-<section class="section framed">
-  <h2 data-jp="個人制作"
-      data-en="Personal Projects"></h2>
-  <div class="carousel">
-    <!-- Personal works -->
-    <a href="https://www.instagram.com/p/DLAFLA8pNH2/" target="_blank"><img src="https://www.instagram.com/p/DLAFLA8pNH2/media/?size=l"></a>
-    <a href="https://www.instagram.com/p/DK1ZAv0JsPZ/" target="_blank"><img src="https://www.instagram.com/p/DK1ZAv0JsPZ/media/?size=l"></a>
-    <a href="https://www.instagram.com/p/DKWstdTpl94/" target="_blank"><img src="https://www.instagram.com/p/DKWstdTpl94/media/?size=l"></a>
-  </div>
-</section>
-
-<section class="section framed split">
-  <div>
-    <h2 data-jp="コンタクト" data-en="Contact"></h2>
-    <p>Email: abekobofan@gmail.com</p>
-    <p>Instagram: @akvisualworks</p>
-  </div>
-  <div>
-    <h2 data-jp="About" data-en="About"></h2>
-    <p data-jp="映像制作・編集・SNS運営を中心に活動しています。"
-       data-en="Video creator specializing in filming, editing, and social media.">
+  <!-- HERO -->
+  <section class="hero reveal">
+    <h1>AK Visual Works</h1>
+    <p data-jp="映像・編集・ビジュアルストーリーテリング"
+       data-en="Film · Editing · Visual Storytelling">
+      映像・編集・ビジュアルストーリーテリング
     </p>
-  </div>
-</section>
 
-<footer>
-  <p>© AKVisualWorks. All content is protected under applicable copyright laws.</p>
-</footer>
+    <div class="video-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/0XudW6piCtk"
+        title="Main Video"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
 
-<script src="script.js"></script>
+  <!-- PROFESSIONAL WORKS -->
+  <section class="works reveal">
+    <div class="bg-shape blue"></div>
+    <h2 data-jp="Professional Works（早稲田大学関連）"
+        data-en="Professional Works (Waseda University)">
+      Professional Works（早稲田大学関連）
+    </h2>
+
+    <div class="carousel">
+      <!-- Instagram embeds -->
+      <iframe src="https://www.instagram.com/p/DS7p10fCceS/embed"></iframe>
+      <iframe src="https://www.instagram.com/p/DSouPg1gJNq/embed"></iframe>
+      <iframe src="https://www.instagram.com/p/DRyshOSCc-B/embed"></iframe>
+      <iframe src="https://www.instagram.com/p/DRtY_NXjH2a/embed"></iframe>
+      <iframe src="https://www.instagram.com/p/DQiH7cVDJM6/embed"></iframe>
+      <iframe src="https://www.instagram.com/p/DPpeeu-CQvn/embed"></iframe>
+    </div>
+
+    <p class="role-note"
+       data-jp="※ 撮影・編集・SNS運用を担当"
+       data-en="* Role: Shooting / Editing / SNS Management">
+      ※ 撮影・編集・SNS運用を担当
+    </p>
+  </section>
+
+  <!-- PERSONAL WORKS -->
+  <section class="works reveal">
+    <div class="bg-shape gray"></div>
+    <h2 data-jp="Personal Works"
+        data-en="Personal Works">
+      Personal Works
+    </h2>
+
+    <div class="carousel">
+      <iframe src="https://www.instagram.com/p/DLAFLA8pNH2/embed"></iframe>
+      <iframe src="https://www.instagram.com/p/DK1ZAv0JsPZ/embed"></iframe>
+      <iframe src="https://www.instagram.com/p/DKWstdTpl94/embed"></iframe>
+      <iframe src="https://www.instagram.com/p/DFtKnqJT-z0/embed"></iframe>
+      <iframe src="https://www.instagram.com/p/DDooSoESP0m/embed"></iframe>
+    </div>
+  </section>
+
+  <!-- ABOUT + CONTACT -->
+  <section class="about reveal">
+    <div class="bg-shape blue soft"></div>
+
+    <h2 data-jp="About / Contact"
+        data-en="About / Contact">
+      About / Contact
+    </h2>
+
+    <p
+      data-jp="映像制作・編集・SNS運用を軸に、大学広報や国際向けコンテンツ制作に従事。落ち着いた映像表現と色作りを得意としています。"
+      data-en="I work in video production, editing, and SNS content creation, with a focus on institutional and international storytelling. My strength lies in calm visual direction and color grading.">
+      映像制作・編集・SNS運用を軸に、大学広報や国際向けコンテンツ制作に従事。落ち着いた映像表現と色作りを得意としています。
+    </p>
+
+    <p class="contact">
+      Instagram: <a href="https://www.instagram.com/akvisualworks/" target="_blank">@akvisualworks</a><br>
+      YouTube: <a href="https://www.youtube.com/@AKVisualWorks" target="_blank">AKVisualWorks</a><br>
+      Email: <a href="mailto:abekobofan@gmail.com">abekobofan@gmail.com</a>
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © AK Visual Works. All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
