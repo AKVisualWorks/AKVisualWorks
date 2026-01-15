@@ -2,115 +2,98 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AKVisualWorks</title>
-  <meta name="description" content="AKVisualWorks – Video production, editing, and visual storytelling." />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="AKVisualWorks" />
-  <meta property="og:description" content="Visual works by Armand Kojima" />
-  <meta property="og:type" content="website" />
 
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <!-- Language Toggle -->
-  <div class="lang-toggle">
-    <button id="jpBtn" class="active">JP</button>
-    <button id="enBtn">EN</button>
-  </div>
 
-  <!-- HERO -->
-  <section class="hero reveal">
-    <h1>AKVisualWorks</h1>
-    <p class="sub jp">映像制作・編集・ビジュアルストーリーテリング</p>
-    <p class="sub en hidden">Video Production · Editing · Visual Storytelling</p>
-  </section>
+<header class="top">
+  <h1>AKVisualWorks</h1>
+  <button id="langToggle">EN</button>
+</header>
 
-  <!-- FEATURED VIDEO -->
-  <section class="featured reveal">
+<!-- HERO / MAIN VIDEO -->
+<section class="section framed reveal">
+  <h2 data-jp="映像作品（代表作）" data-en="Featured Video"></h2>
+
+  <div class="video-wrap">
     <iframe
       src="https://www.youtube.com/embed/0XudW6piCtk"
-      title="Featured Work"
+      title="AKVisualWorks Featured Video"
       frameborder="0"
       allowfullscreen>
     </iframe>
-  </section>
+  </div>
+</section>
 
-  <!-- PROFESSIONAL WORKS -->
-  <section class="carousel-section reveal">
-    <h2 class="jp">Professional Works（業務作品）</h2>
-    <h2 class="en hidden">Professional Works</h2>
+<!-- PROFESSIONAL WORKS -->
+<section class="section framed reveal">
+  <h2
+    data-jp="業務実績（早稲田大学関連）"
+    data-en="Professional Works (Waseda University)">
+  </h2>
 
-    <div class="carousel">
-      <img src="https://www.instagram.com/p/DS7p10fCceS/media/?size=l" />
-      <img src="https://www.instagram.com/p/DSouPg1gJNq/media/?size=l" />
-      <img src="https://www.instagram.com/p/DRyshOSCc-B/media/?size=l" />
-      <img src="https://www.instagram.com/p/DRtY_NXjH2a/media/?size=l" />
-      <img src="https://www.instagram.com/p/DQiH7cVDJM6/media/?size=l" />
-      <img src="https://www.instagram.com/p/DPpeeu-CQvn/media/?size=l" />
-      <img src="https://www.instagram.com/p/DPVo2AaiZy3/media/?size=l" />
-      <img src="https://www.instagram.com/p/DNm0satN_db/media/?size=l" />
-      <img src="https://www.instagram.com/p/DLEhUYBSfKn/media/?size=l" />
-      <img src="https://www.instagram.com/p/DRBylE0EdRB/media/?size=l" />
-      <img src="https://www.instagram.com/p/DIk0pZZyjcc/media/?size=l" />
-      <img src="https://www.instagram.com/p/DMXA5AJS9th/media/?size=l" />
-    </div>
-  </section>
+  <div class="carousel">
+    <!-- EACH ITEM -->
+    <iframe src="https://www.instagram.com/p/DS7p10fCceS/embed"></iframe>
+    <iframe src="https://www.instagram.com/p/DSouPg1gJNq/embed"></iframe>
+    <iframe src="https://www.instagram.com/p/DRyshOSCc-B/embed"></iframe>
+    <iframe src="https://www.instagram.com/p/DRtY_NXjH2a/embed"></iframe>
+    <iframe src="https://www.instagram.com/p/DQiH7cVDJM6/embed"></iframe>
+    <iframe src="https://www.instagram.com/p/DPpeeu-CQvn/embed"></iframe>
+    <iframe src="https://www.instagram.com/p/DPVo2AaiZy3/embed"></iframe>
+    <iframe src="https://www.instagram.com/p/DNm0satN_db/embed"></iframe>
+    <iframe src="https://www.instagram.com/p/DLEhUYBSfKn/embed"></iframe>
+    <iframe src="https://www.instagram.com/p/DRBylE0EdRB/embed"></iframe>
+    <iframe src="https://www.instagram.com/p/DIk0pZZyjcc/embed"></iframe>
+    <iframe src="https://www.instagram.com/p/DMXA5AJS9th/embed"></iframe>
+  </div>
+</section>
 
-  <!-- PERSONAL WORKS -->
-  <section class="carousel-section reveal">
-    <h2 class="jp">Personal Works（個人制作）</h2>
-    <h2 class="en hidden">Personal Works</h2>
+<!-- PERSONAL WORKS -->
+<section class="section framed reveal">
+  <h2
+    data-jp="個人制作"
+    data-en="Personal Works">
+  </h2>
 
-    <div class="carousel">
-      <img src="https://www.instagram.com/p/DLAFLA8pNH2/media/?size=l" />
-      <img src="https://www.instagram.com/p/DK1ZAv0JsPZ/media/?size=l" />
-      <img src="https://www.instagram.com/p/DKWstdTpl94/media/?size=l" />
-      <img src="https://www.instagram.com/p/DFtKnqJT-z0/media/?size=l" />
-      <img src="https://www.instagram.com/p/DDooSoESP0m/media/?size=l" />
-      <img src="https://www.instagram.com/p/DIoSgQHy_Tt/media/?size=l" />
-      <img src="https://www.instagram.com/p/DClw9VnSCQQ/media/?size=l" />
-      <img src="https://www.instagram.com/p/DBONgeyygWd/media/?size=l" />
-      <img src="https://www.instagram.com/p/DATMht8y31X/media/?size=l" />
-    </div>
-  </section>
+  <div class="carousel">
+    <iframe src="https://www.instagram.com/p/DLAFLA8pNH2/embed"></iframe>
+    <iframe src="https://www.instagram.com/p/DK1ZAv0JsPZ/embed"></iframe>
+    <iframe src="https://www.instagram.com/p/DKWstdTpl94/embed"></iframe>
+    <iframe src="https://www.instagram.com/p/DFtKnqJT-z0/embed"></iframe>
+    <iframe src="https://www.instagram.com/p/DDooSoESP0m/embed"></iframe>
+    <iframe src="https://www.instagram.com/p/DIoSgQHy_Tt/embed"></iframe>
+    <iframe src="https://www.instagram.com/p/DClw9VnSCQQ/embed"></iframe>
+    <iframe src="https://www.instagram.com/p/DBONgeyygWd/embed"></iframe>
+    <iframe src="https://www.instagram.com/p/DATMht8y31X/embed"></iframe>
+  </div>
+</section>
 
-  <!-- ABOUT + CONTACT -->
-  <section class="about reveal">
-    <h2 class="jp">About / Contact</h2>
-    <h2 class="en hidden">About / Contact</h2>
+<!-- ABOUT + CONTACT -->
+<section class="section framed reveal">
+  <h2 data-jp="プロフィール / お問い合わせ" data-en="About / Contact"></h2>
 
-    <p class="jp">
-      映像制作・編集・SNS向けコンテンツ制作を中心に活動。<br />
-      業務作品と個人制作を明確に分け、文脈に応じた表現を大切にしています。
-    </p>
+  <p
+    data-jp="映像制作・編集・SNS運用を中心に活動。大学公式SNS・映像制作に携わる。"
+    data-en="Video creator focusing on filming, editing, and SNS management. Experience with official university media.">
+  </p>
 
-    <p class="en hidden">
-      Video production, editing, and visual storytelling.<br />
-      Professional and personal works are presented separately to respect context and intent.
-    </p>
+  <p>Email: <a href="mailto:abekobofan@gmail.com">abekobofan@gmail.com</a></p>
+</section>
 
-    <p class="contact">
-      Instagram: <a href="https://www.instagram.com/akvisualworks/" target="_blank">@akvisualworks</a><br />
-      Email: <a href="mailto:abekobofan@gmail.com">abekobofan@gmail.com</a>
-    </p>
+<footer>
+  <p data-jp="© AKVisualWorks. 掲載されている映像・画像の著作権は制作者に帰属します。"
+     data-en="© AKVisualWorks. All visual content is the property of its respective creator.">
+  </p>
+</footer>
 
-    <p class="disclaimer jp">
-      ※本サイトに掲載されている業務作品は、制作実績紹介目的で掲載しています。
-    </p>
-    <p class="disclaimer en hidden">
-      *Some works are presented for portfolio purposes only.
-    </p>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    © AKVisualWorks / Armand Kojima
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

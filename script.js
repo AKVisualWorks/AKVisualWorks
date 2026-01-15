@@ -1,29 +1,32 @@
 // Language toggle
-const jpBtn = document.getElementById("jpBtn");
-const enBtn = document.getElementById("enBtn");
+let currentLang = "jp";
 
-jpBtn.onclick = () => switchLang("jp");
-enBtn.onclick = () => switchLang("en");
+const toggle = document.getElementById("langToggle");
+const elements = document.querySelectorAll("[data-jp]");
 
-function switchLang(lang) {
-  document.querySelectorAll(".jp").forEach(e => e.classList.toggle("hidden", lang !== "jp"));
-  document.querySelectorAll(".en").forEach(e => e.classList.toggle("hidden", lang !== "en"));
-
-  jpBtn.classList.toggle("active", lang === "jp");
-  enBtn.classList.toggle("active", lang === "en");
+function updateLang() {
+  elements.forEach(el => {
+    el.textContent = el.dataset[currentLang];
+  });
 }
+
+toggle.addEventListener("click", () => {
+  currentLang = currentLang === "jp" ? "en" : "jp";
+  toggle.textContent = currentLang === "jp" ? "EN" : "JP";
+  updateLang();
+});
+
+updateLang();
 
 // Scroll reveal
 const reveals = document.querySelectorAll(".reveal");
 
-function revealOnScroll() {
-  reveals.forEach(section => {
-    const top = section.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
-      section.classList.add("active");
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
     }
   });
-}
+});
 
-window.addEventListener("scroll", revealOnScroll);
-revealOnScroll();
+reveals.forEach(r => observer.observe(r));
