@@ -1,11 +1,14 @@
 // Scroll reveal
-const reveals = document.querySelectorAll(".reveal");
+const reveals = document.querySelectorAll(
+  ".reveal-up, .reveal-left, .reveal-scale, .reveal-slow"
+);
 
 const observer = new IntersectionObserver(
   entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add("active");
+        observer.unobserve(entry.target);
       }
     });
   },
@@ -25,6 +28,7 @@ function setLang(lang) {
   });
   jpBtn.classList.toggle("active", lang === "jp");
   enBtn.classList.toggle("active", lang === "en");
+  document.documentElement.lang = lang;
 }
 
 jpBtn.onclick = () => setLang("jp");
