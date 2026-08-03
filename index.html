@@ -5,61 +5,150 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AK Visual Works</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <div class="grain"></div>
+
   <!-- Language Toggle -->
   <div class="lang-toggle">
     <button id="jpBtn" class="active">JP</button>
+    <span class="divider">/</span>
     <button id="enBtn">EN</button>
   </div>
 
   <!-- HERO -->
-  <section class="hero reveal">
+  <section class="hero reveal-up">
+    <div class="bg-shape blue hero-shape"></div>
+    <p class="eyebrow" data-jp="ポートフォリオ" data-en="Portfolio">ポートフォリオ</p>
     <h1>AK Visual Works</h1>
-    <p data-jp="映像・編集・ビジュアルストーリーテリング"
+    <p class="tagline" data-jp="映像・編集・ビジュアルストーリーテリング"
        data-en="Film · Editing · Visual Storytelling">
       映像・編集・ビジュアルストーリーテリング
     </p>
 
-    <div class="video-wrapper">
+    <div class="video-wrapper featured">
       <iframe
-        src="https://www.youtube.com/embed/0XudW6piCtk"
-        title="Main Video"
+        src="https://www.instagram.com/p/DYwJ-0fptc9/embed"
+        title="Featured Video"
         frameborder="0"
-        allowfullscreen>
+        allowfullscreen
+        loading="lazy">
       </iframe>
     </div>
   </section>
 
   <!-- PROFESSIONAL WORKS -->
-  <section class="works reveal">
+  <section class="works reveal-left">
     <div class="bg-shape blue"></div>
     <h2 data-jp="Professional Works（早稲田大学関連）"
         data-en="Professional Works (Waseda University)">
       Professional Works（早稲田大学関連）
     </h2>
 
-    <div class="carousel">
-      <!-- Instagram embeds -->
-      <iframe src="https://www.instagram.com/p/DS7p10fCceS/embed"></iframe>
-      <iframe src="https://www.instagram.com/p/DSouPg1gJNq/embed"></iframe>
-      <iframe src="https://www.instagram.com/p/DRyshOSCc-B/embed"></iframe>
-      <iframe src="https://www.instagram.com/p/DRtY_NXjH2a/embed"></iframe>
-      <iframe src="https://www.instagram.com/p/DQiH7cVDJM6/embed"></iframe>
-      <iframe src="https://www.instagram.com/p/DPpeeu-CQvn/embed"></iframe>
-    </div>
-
-    <p class="role-note"
-       data-jp="※ 撮影・編集・SNS運用を担当"
-       data-en="* Role: Shooting / Editing / SNS Management">
-      ※ 撮影・編集・SNS運用を担当
+    <p class="section-note"
+       data-jp="以下は早稲田大学で撮影・編集を担当した映像です。早稲田大学公式Instagram（@waseda_university）もぜひご覧ください。"
+       data-en="The following videos were filmed and edited during my time at Waseda University. For more, visit Waseda University's official Instagram (@waseda_university).">
+      以下は早稲田大学で撮影・編集を担当した映像です。早稲田大学公式Instagram（@waseda_university）もぜひご覧ください。
     </p>
+
+    <div class="carousel">
+      <iframe src="https://www.instagram.com/p/DS7p10fCceS/embed" loading="lazy"></iframe>
+      <iframe src="https://www.instagram.com/p/DSouPg1gJNq/embed" loading="lazy"></iframe>
+      <iframe src="https://www.instagram.com/p/DRyshOSCc-B/embed" loading="lazy"></iframe>
+      <iframe src="https://www.instagram.com/p/DRtY_NXjH2a/embed" loading="lazy"></iframe>
+      <iframe src="https://www.instagram.com/p/DQiH7cVDJM6/embed" loading="lazy"></iframe>
+      <iframe src="https://www.instagram.com/p/DPpeeu-CQvn/embed" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <!-- PRESS / FEATURED WORK -->
+  <section class="press reveal-up">
+    <div class="bg-shape gray"></div>
+    <h2 data-jp="掲載実績" data-en="Press / Featured In">掲載実績</h2>
+
+    <div class="press-grid">
+
+      <a class="press-card" href="https://www.waseda.jp/top/en/news/84958" target="_blank" rel="noopener">
+        <p class="press-pub">Waseda University</p>
+        <p class="press-title">The Bulgarian President's Lecture at Waseda University: Student Exchanges for Future Relations Between Japan and Bulgaria</p>
+        <p class="press-caption"
+           data-jp="撮影を担当し、学生スタッフによる記事執筆をディレクションしました。"
+           data-en="Photography, and directed a student staff writer on the article.">
+          撮影を担当し、学生スタッフによる記事執筆をディレクションしました。
+        </p>
+      </a>
+
+      <a class="press-card" href="https://time.com/branded-content/global-kigyo/empowered-education/" target="_blank" rel="noopener">
+        <p class="press-pub">TIME</p>
+        <p class="press-title">Empowered Education</p>
+        <p class="press-caption"
+           data-jp="早稲田大学とTIME誌の橋渡し役を担当し、記事内の講堂の写真（下部）を撮影しました。"
+           data-en="Served as liaison between Waseda University and TIME magazine for this feature; photographed the auditorium image used in the article.">
+          早稲田大学とTIME誌の橋渡し役を担当し、記事内の講堂の写真（下部）を撮影しました。
+        </p>
+      </a>
+
+      <a class="press-card" href="https://www.waseda.jp/inst/athletic/news/2026/04/27/57409/" target="_blank" rel="noopener">
+        <p class="press-pub">早稲田大学 競技スポーツセンター</p>
+        <p class="press-title">漕艇部 早慶レガッタ 男子対校エイト3連覇、女子エイト36連覇を達成</p>
+        <p class="press-caption"
+           data-jp="撮影・映像編集を担当しました。"
+           data-en="Photography and video editing.">
+          撮影・映像編集を担当しました。
+        </p>
+      </a>
+
+      <a class="press-card" href="https://www.waseda.jp/top/en/news/88888" target="_blank" rel="noopener">
+        <p class="press-pub">Waseda University</p>
+        <p class="press-title">Belgium Day at Waseda: Exchanges Between the Ambassador and Students</p>
+        <p class="press-caption"
+           data-jp="撮影を担当し、学生スタッフによる記事執筆をディレクション、編集も行いました。"
+           data-en="Photography, plus directed a student staff writer on the article and handled editing.">
+          撮影を担当し、学生スタッフによる記事執筆をディレクション、編集も行いました。
+        </p>
+      </a>
+
+      <a class="press-card" href="https://www.waseda.jp/top/en/news/87965" target="_blank" rel="noopener">
+        <p class="press-pub">Waseda University</p>
+        <p class="press-title">Warden of New College, University of Oxford visits Waseda University</p>
+        <p class="press-caption"
+           data-jp="撮影を担当し、Instagram用の動画を制作しました。"
+           data-en="Photography, and produced the accompanying Instagram video.">
+          撮影を担当し、Instagram用の動画を制作しました。
+        </p>
+      </a>
+
+      <a class="press-card" href="https://www.waseda.jp/top/en/news/86648" target="_blank" rel="noopener">
+        <p class="press-pub">Waseda University</p>
+        <p class="press-title">Delegation from Université de Montréal visits Waseda</p>
+        <p class="press-caption"
+           data-jp="撮影を担当しました。"
+           data-en="Photography.">
+          撮影を担当しました。
+        </p>
+      </a>
+
+      <a class="press-card" href="https://www.waseda.jp/top/en/-news/86080" target="_blank" rel="noopener">
+        <p class="press-pub">Waseda University</p>
+        <p class="press-title">Waseda Holds Strategic Policy Committee Meeting to Strengthen International Competitiveness</p>
+        <p class="press-caption"
+           data-jp="Instagram用の動画を制作。記事内の写真は、その動画からのスクリーンショットです。"
+           data-en="Produced the Instagram video for this event; the photos used in the article are screenshots taken from that video.">
+          Instagram用の動画を制作。記事内の写真は、その動画からのスクリーンショットです。
+        </p>
+      </a>
+
+    </div>
   </section>
 
   <!-- PERSONAL WORKS -->
-  <section class="works reveal">
+  <section class="works reveal-scale">
     <div class="bg-shape gray"></div>
     <h2 data-jp="Personal Works"
         data-en="Personal Works">
@@ -67,22 +156,18 @@
     </h2>
 
     <div class="carousel">
-      <iframe src="https://www.instagram.com/p/DLAFLA8pNH2/embed"></iframe>
-      <iframe src="https://www.instagram.com/p/DK1ZAv0JsPZ/embed"></iframe>
-      <iframe src="https://www.instagram.com/p/DKWstdTpl94/embed"></iframe>
-      <iframe src="https://www.instagram.com/p/DFtKnqJT-z0/embed"></iframe>
-      <iframe src="https://www.instagram.com/p/DDooSoESP0m/embed"></iframe>
+      <iframe src="https://www.instagram.com/p/DYB1kw5JLYE/embed" loading="lazy"></iframe>
+      <iframe src="https://www.instagram.com/p/DWx_FzkDJ9r/embed" loading="lazy"></iframe>
+      <iframe src="https://www.instagram.com/p/DS7p10fCceS/embed" loading="lazy"></iframe>
+      <iframe src="https://www.instagram.com/p/DMXA5AJS9th/embed" loading="lazy"></iframe>
     </div>
   </section>
 
   <!-- ABOUT + CONTACT -->
-  <section class="about reveal">
+  <section class="about reveal-slow">
     <div class="bg-shape blue soft"></div>
 
-    <h2 data-jp="About / Contact"
-        data-en="About / Contact">
-      About / Contact
-    </h2>
+    <h2 data-jp="About / Contact" data-en="About / Contact">About / Contact</h2>
 
     <p
       data-jp="映像制作・編集・SNS運用を軸に、大学広報や国際向けコンテンツ制作に従事。落ち着いた映像表現と色作りを得意としています。"
@@ -90,9 +175,15 @@
       映像制作・編集・SNS運用を軸に、大学広報や国際向けコンテンツ制作に従事。落ち着いた映像表現と色作りを得意としています。
     </p>
 
+    <p class="open-note"
+      data-jp="現在、新しい機会を探しています。"
+      data-en="Currently open to new opportunities.">
+      現在、新しい機会を探しています。
+    </p>
+
     <p class="contact">
-      Instagram: <a href="https://www.instagram.com/akvisualworks/" target="_blank">@akvisualworks</a><br>
-      YouTube: <a href="https://www.youtube.com/@AKVisualWorks" target="_blank">AKVisualWorks</a><br>
+      Instagram: <a href="https://www.instagram.com/akvisualworks/" target="_blank" rel="noopener">@akvisualworks</a><br>
+      YouTube: <a href="https://www.youtube.com/@AKVisualWorks" target="_blank" rel="noopener">AKVisualWorks</a><br>
       Email: <a href="mailto:abekobofan@gmail.com">abekobofan@gmail.com</a>
     </p>
   </section>
