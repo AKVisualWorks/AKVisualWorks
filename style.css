@@ -355,3 +355,144 @@ footer {
     height: 380px;
   }
 }
+
+
+/* ============ CASE STUDIES ============ */
+.cases {
+  scroll-margin-top: 20px;
+}
+
+.cases h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  margin-bottom: 18px;
+}
+
+.how-note {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  max-width: 720px;
+  margin-bottom: 48px;
+  padding-left: 16px;
+  border-left: 2px solid var(--blue);
+}
+
+.case-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.case {
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(188, 212, 230, 0.4);
+  border-radius: 22px;
+  padding: 36px 34px;
+}
+
+.case-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.tag {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  border: 1px solid var(--blue);
+  border-radius: 999px;
+  padding: 3px 12px;
+}
+
+.case h3 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+}
+
+.case-meta {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.case-body {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 18px 28px;
+  margin-top: 26px;
+}
+
+.case-body dt {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  padding-top: 3px;
+}
+
+.case-body dd {
+  font-size: 0.95rem;
+}
+
+.case-stats {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 32px;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(188, 212, 230, 0.5);
+}
+
+.case-stats li {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-num {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.case-link {
+  display: inline-block;
+  margin-top: 22px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--blue);
+  transition: border-color 0.3s var(--ease);
+}
+
+.case-link:hover {
+  border-color: var(--text);
+}
+
+.case-foot {
+  margin-top: 28px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 640px) {
+  .case {
+    padding: 26px 22px;
+  }
+  .case-body {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .case-body dd {
+    margin-bottom: 14px;
+  }
+}
