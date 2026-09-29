@@ -36,3 +36,50 @@ enBtn.onclick = () => setLang("en");
 
 // Default JP
 setLang("jp");
+
+// Before/After sliders
+document.querySelectorAll(".ba-slider-frame").forEach(frame => {
+  const wrap = frame.querySelector(".ba-before-wrap");
+  const beforeImg = frame.querySelector(".ba-img-before");
+  const handle = frame.querySelector(".ba-handle");
+
+  function syncBeforeWidth() {
+    beforeImg.style.width = frame.offsetWidth + "px";
+  }
+
+  function setPct(pct) {
+    pct = Math.max(0, Math.min(100, pct));
+    wrap.style.width = pct + "%";
+    handle.style.left = pct + "%";
+  }
+
+  function pctFromEvent(clientX) {
+    const rect = frame.getBoundingClientRect();
+    return ((clientX - rect.left) / rect.width) * 100;
+  }
+
+  syncBeforeWidth();
+  setPct(50);
+  window.addEventListener("resize", syncBeforeWidth);
+
+  let dragging = false;
+
+  frame.addEventListener("pointerdown", e => {
+    dragging = true;
+    frame.setPointerCapture(e.pointerId);
+    setPct(pctFromEvent(e.clientX));
+  });
+
+  frame.addEventListener("pointermove", e => {
+    if (!dragging) return;
+    setPct(pctFromEvent(e.clientX));
+  });
+
+  frame.addEventListener("pointerup", () => {
+    dragging = false;
+  });
+
+  frame.addEventListener("pointercancel", () => {
+    dragging = false;
+  });
+});
